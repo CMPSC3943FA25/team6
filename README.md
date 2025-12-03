@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Heart Check Website
 
 A Flask-based web application for assessing heart health status based on vital signs and lifestyle factors.
