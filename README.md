@@ -180,20 +180,4 @@ pip install flask
 
 ⚠️ This application is for educational purposes only and should not replace professional medical advice. Always consult with a healthcare provider for health concerns.
 
-## License
 
-This project is for educational use as part of a university course project.
-
-## Contact
-
-For questions or issues, contact the team through your course communication channels.
-
----
-
-=======
-
-   HEART CHECK ❤️  
-
-
-"Your personal heart health guardian."
->>>>>>> 18b9581d947a0f2fec3b9c1c32e40ee5f034639e
