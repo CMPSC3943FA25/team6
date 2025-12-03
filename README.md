@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Heart Check Website
 
 A Flask-based web application for assessing heart health status based on vital signs and lifestyle factors.
@@ -189,3 +190,10 @@ For questions or issues, contact the team through your course communication chan
 
 ---
 
+=======
+
+   HEART CHECK ❤️  
+
+
+"Your personal heart health guardian."
+>>>>>>> 18b9581d947a0f2fec3b9c1c32e40ee5f034639e
