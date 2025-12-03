@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Check - Assessment Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h1>❤️ Heart Health Assessment</h1>
+            <p>Please fill in your information accurately</p>
+        </div>
+        
+        <form action="/analyze" method="POST" class="health-form">
+            <!-- Personal Information -->
+            <div class="form-section">
+                <h2>Personal Information</h2>
+                
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="120" required placeholder="25">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select...</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vital Signs -->
+            <div class="form-section">
+                <h2>Vital Signs</h2>
+                
+                <div class="form-group">
+                    <label for="systolic_bp">Systolic Blood Pressure (top number):</label>
+                    <input type="number" id="systolic_bp" name="systolic_bp" min="70" max="250" required placeholder="120">
+                    <small>Normal range: 90-120 mmHg</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="diastolic_bp">Diastolic Blood Pressure (bottom number):</label>
+                    <input type="number" id="diastolic_bp" name="diastolic_bp" min="40" max="150" required placeholder="80">
+                    <small>Normal range: 60-80 mmHg</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="heart_rate">Resting Heart Rate (bpm):</label>
+                    <input type="number" id="heart_rate" name="heart_rate" min="40" max="200" required placeholder="72">
+                    <small>Normal range: 60-100 bpm</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cholesterol">Total Cholesterol (mg/dL):</label>
+                    <input type="number" id="cholesterol" name="cholesterol" min="100" max="400" required placeholder="180">
+                    <small>Desirable: Less than 200 mg/dL</small>
+                </div>
+            </div>
+            
+            <!-- Lifestyle -->
+            <div class="form-section">
+                <h2>Lifestyle Information</h2>
+                
+                <div class="form-group">
+                    <label>Do you smoke?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="smoker" value="yes" required>
+                            Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="smoker" value="no" checked>
+                            No
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="exercise">Exercise Frequency:</label>
+                    <select id="exercise" name="exercise" required>
+                        <option value="none">None (0 days/week)</option>
+                        <option value="light">Light (1-2 days/week)</option>
+                        <option value="moderate">Moderate (3-4 days/week)</option>
+                        <option value="regular">Regular (5+ days/week)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Check My Heart Health</button>
+                <a href="/" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
